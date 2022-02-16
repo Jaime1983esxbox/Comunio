@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-size: 18px;
+}
+
+.nombre{
+    font-size: 25px;
+    color: red;
+}
+
+.plantillas{
+    display: flex;
+    justify-content: space-around;
+}

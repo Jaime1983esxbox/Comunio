@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>LIGA COMUNIO</h1>
+    <h2>LISTA JUGADORES DE LA LIGA</h2>
+    <div class="plantilla">
+        <label for="">Usuario</label>
+        <input [(ngModel)]="nombreUsuario" type="text"><br><br>
+        <label for="">POR </label>
+        <input [(ngModel)]="porteros" type="text"><br><br>
+        <label for="">DEF </label>
+        <input [(ngModel)]="defensas" type="text"><br><br>
+        <label for="">MED </label>
+        <input [(ngModel)]="centrocampistas" type="text"><br><br>
+        <label for="">DEL </label>
+        <input [(ngModel)]="delanteros" type="text"><br><br>
+        <input type="button" value="Añadir Jugador" (click)="agregarUsuario()">
+    </div>
+    <div class="plantillas" *ngIf="mostrarPlantillas">
+        <div *ngFor="let usuario of usuarios">
+            <h3>La plantilla del usuario {{usuario.nombre}} es:</h3>
+            <ul>
+                <li *ngFor="let jugador of usuario.plantilla" ngDefaultControl><span class="nombre">{{jugador.nombre}}</span>&nbsp;{{jugador.posicion}}&nbsp;Precio: {{jugador.precio}}</li>
+            </ul>
+            <h3>El precio total de la plantilla es: {{usuario.precioTotalPlantilla}}</h3>
+        </div>
+    </div>
+</div>
